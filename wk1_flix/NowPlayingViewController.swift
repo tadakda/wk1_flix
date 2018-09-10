@@ -71,6 +71,9 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let overview = movie["overview"] as! String
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.green
+        cell.selectedBackgroundView = backgroundView
         
         let posterPathString = movie["poster_path"] as! String
         let baseURLString = "https://image.tmdb.org/t/p/w500"
